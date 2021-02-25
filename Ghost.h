@@ -6,9 +6,10 @@ private:
     char movementMode;
     int targetX;
     int targetY;
+    Pacman *pacman;
 public:
-    Ghost(int, int);
+    Ghost(int, int, char);
     virtual void respawn();
-    virtual void move(char)=0;
+    virtual void move(char);
     virtual void calculateNextPos()=0;
 };
